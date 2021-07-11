@@ -248,7 +248,7 @@ return [
     | Determines if you can check if a user has a permission using the "can" method.
     |
     */
-    'permissions_as_gates' => false,
+    'permissions_as_gates' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -268,7 +268,7 @@ return [
         | Turn this value to false if you don't want to use Laratrust admin panel
         |
         */
-        'register' => false,
+        'register' => true,
 
         /*
         |--------------------------------------------------------------------------
@@ -299,7 +299,7 @@ return [
         | These middleware will get attached onto each Laratrust panel route.
         |
         */
-        'middleware' => ['web'],
+        'middleware' => ['web','auth','role:admin'],
 
         /*
         |--------------------------------------------------------------------------
